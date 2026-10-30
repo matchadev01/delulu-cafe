@@ -45,6 +45,9 @@ body{background:var(--wall);color:var(--ink);font-family:var(--f-body);overflow:
   padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
 #bar h1{margin:0;font:22px/1 var(--f-display);color:var(--pink);letter-spacing:.01em;}
 #bar h1 span{font:15px/1 var(--f-body);color:#fff3cf;margin-left:6px;}
+.barL{display:flex;align-items:center;gap:12px;}
+#homeLink{font:14px/1 var(--f-body);color:var(--ink);background:var(--honey);border-radius:20px;padding:6px 11px;text-decoration:none;white-space:nowrap;}
+#homeLink:focus-visible{outline:2px solid #fff;outline-offset:2px;}
 .stats{display:flex;gap:14px;align-items:center;flex-wrap:wrap;font:15px/1 var(--f-body);}
 .stats b{font:20px/1 var(--f-pixel);font-weight:400;color:var(--honey);font-variant-numeric:tabular-nums;}
 .pips{display:inline-flex;gap:3px;vertical-align:middle;}
@@ -180,7 +183,8 @@ body{background:var(--wall);color:var(--ink);font-family:var(--f-body);overflow:
 <body>
 <div id="app">
   <header id="bar">
-    <h1>Delulu Café<span>迪露露咖啡館</span></h1>
+    <div class="barL"><a id="homeLink" href="./">← 小鎮</a>
+    <h1>Delulu Café<span>迪露露咖啡館</span></h1></div>
     <div class="stats">
       <span>第 <b id="dayN">1</b> 天</span>
       <span>客人 <b id="custN">0/8</b></span>
